@@ -4,13 +4,13 @@ int _quicksort(int *arr, int left, int right)
     int key = arr[hole];
     while (left < right)
     {
-        while (left < right && arr[right] > key)
+        while (left < right && arr[right] >= key)
         {
             right--;
         }
         arr[hole] = arr[right];
         hole = right;
-        while (left < right && arr[left] < key)
+        while (left < right && arr[left] <= key)
         {
             left++;
         }
